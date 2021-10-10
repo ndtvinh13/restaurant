@@ -164,10 +164,10 @@ header {
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
-
+/* 
 .card-body {
-  /* background: linear-gradient(120deg, #fcba6f, #ff8e71); */
-}
+  background: linear-gradient(120deg, #fcba6f, #ff8e71);
+} */
 
 .fa-star {
   background-color: rgb(255, 239, 9);
