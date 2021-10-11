@@ -176,6 +176,50 @@ header {
 /* specials====================== */
 .m-specials h1 {
   margin: 30px;
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7b00,
+    #ffc400,
+    #ff7b00,
+    #ff0000
+  );
+  background-size: 500%;
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: colorwave 5s linear infinite;
+}
+
+@keyframes colorwave {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.m-specials .row .col-md-4 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.m-specials .row .col-md-4 img {
+  height: 100%;
+  width: 100%;
+}
+
+.m-specials .row .col-md-4 span {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: 4px 4px black;
 }
 
 /* Order now text animation */
