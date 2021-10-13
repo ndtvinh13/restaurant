@@ -1,6 +1,8 @@
 body {
   max-width: 1020px;
   margin: auto;
+  /* background-color: #f7f2ed; */
+  /* background-image: url("https://mellowmushroom.com/wp-content/themes/mm/images/frames/star.png"); */
 }
 
 header {
@@ -111,7 +113,7 @@ header {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: indianred;
+  background-color: #fd7e14;
   transform: scaleX(0);
   transform-origin: bottom left;
   transition: 0.3s;
@@ -120,7 +122,7 @@ header {
 }
 
 .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
-  color: indianred;
+  color: #fd7e14;
 }
 
 .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover::before {
@@ -179,9 +181,9 @@ header {
   background: linear-gradient(
     90deg,
     #ff0000,
-    #ff7b00,
+    #fd7e14,
     #ffc400,
-    #ff7b00,
+    #fd7e14,
     #ff0000
   );
   background-size: 500%;
@@ -229,7 +231,7 @@ header {
 }
 
 .order-p1 {
-  color: violet;
+  color: #333;
   animation: showup 6s infinite;
 }
 
@@ -241,7 +243,7 @@ header {
 
 .order-p2 span {
   margin-left: -300px;
-  color: teal;
+  color: #fd7e14;
   animation: slidein 6s infinite;
 }
 
@@ -300,4 +302,33 @@ header {
     opacity: 0;
     width: 250px;
   }
+}
+
+/* footer======================== */
+.end-text {
+  height: 150px;
+  text-align: center;
+}
+
+.footer {
+  height: 200px;
+  width: 100%;
+  background-color: #333;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.footer-right {
+  display: flex;
+}
+
+.footer .navbar-brand {
+  font-size: 30px;
+  font-family: "Pacifico", "cursive";
+  color: #fd7e14;
+  text-shadow: 2px 2px black;
 }
