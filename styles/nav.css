@@ -322,8 +322,15 @@ header {
   padding: 20px 40px;
 }
 
-.footer-right {
+.footer p {
+  color: #fd7e14;
   display: flex;
+  justify-content: center;
+}
+
+.footer-right a {
+  padding: 5px;
+  color: #fd7e14;
 }
 
 .footer .navbar-brand {

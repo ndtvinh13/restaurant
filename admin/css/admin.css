@@ -1,0 +1,96 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; /* TO hide the overflowed .left-side: 100vh*/
+}
+/* https://medium.com/@zerox/keep-that-damn-footer-at-the-bottom-c7a921cb9551 */
+body > .container-fluid {
+  background-color: rgb(230, 230, 230);
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.navbar hr {
+  width: 2px;
+  height: 20px;
+  display: inline-block;
+  margin: 3px;
+  background-color: #000;
+}
+
+.left-side {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  /* background-color: lightblue; */
+  /* height: 100%; */
+  height: 100vh;
+}
+
+.nav {
+  width: 100%;
+  /* position: absolute; */
+  /* background-color: cyan; */
+}
+
+.navbar {
+  background-color: rgb(226, 189, 95);
+}
+
+.nav-item {
+  width: 100%;
+}
+.nav-item:hover {
+  width: 100%;
+  background-color: cyan;
+  border-radius: 10px;
+}
+
+.active-tab {
+  background-color: cyan;
+  border-radius: 10px;
+}
+
+/* Page=========== */
+/* This uses the same format for other pages */
+.page-ti-co {
+  margin-top: 50px;
+  height: 500px;
+  border-style: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  /* overflow: hidden; */
+}
+
+.page-title {
+  text-align: center;
+  border-bottom-style: solid;
+  padding: 10px;
+}
+
+.page-content {
+  /* height: 500px; */
+  height: 100%;
+}
+
+@media only screen and (max-width: 770px) {
+  .page-ti-co {
+    margin-top: 0;
+  }
+}
+
+/* footer */
+footer {
+  padding: 10px;
+  width: 100%;
+  background-color: rgb(197, 163, 77);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
