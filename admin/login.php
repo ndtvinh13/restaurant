@@ -1,14 +1,14 @@
 <?php 
-    include_once "classes/adminlogin.php";
+    include "../classes/adminlogin.php";
 ?>
 
 <?php 
     // this adminlogin function is from the class from adminlogin.php
     //$class prepresents adminlogin class not function
-    $class= new adminlogin();
+    $class = new adminlogin();
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $adminUser=$_POST['adminUser'];
-        $adminPass=$_POST['adminPass'];
+        $adminPass=md5($_POST['adminPass']);
         // $class Object to call function
         //values will be passed in this para
         $login_check=$class->login_admin($adminUser,$adminPass);
@@ -29,16 +29,25 @@
     <body>
         <div class="container-login">
             <h1>Admin Login</h1>
+            <div class="error-output">
+                <?php 
+                    if(isset($login_check)){
+                        echo "*";
+                        echo $login_check;
+                        echo "*";
+                    }
+                ?>
+            </div>
             <div class="container">
                 <form action="login.php" method="post">
                     <!-- Username -->
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Username</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="adminUser">
+                        <label for="exampleInputEmail1" class="form-label">Username*</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="adminUser">
                     </div>
                     <!-- Password -->
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <label for="exampleInputPassword1" class="form-label">Password*</label>
                         <input type="password" class="form-control" id="exampleInputPassword1" name="adminPass">
                     </div>
                     <div class="cont-btn">

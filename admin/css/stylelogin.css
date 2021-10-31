@@ -21,6 +21,11 @@ h1 {
   text-align: center;
 }
 
+.error-output {
+  text-align: center;
+  font-style: italic;
+}
+
 .cont-btn {
   display: flex;
   justify-content: flex-end;
