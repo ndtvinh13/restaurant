@@ -52,10 +52,11 @@ body > .container-fluid {
 .nav-item {
   width: 100%;
 }
-.nav-item:hover {
-  width: 100%;
+
+.main-link:hover {
   background-color: cyan;
   border-radius: 10px;
+  transition: 0.5s;
 }
 
 .active-tab {
@@ -71,7 +72,6 @@ body > .container-fluid {
   border-style: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   background-color: #fff;
-  /* overflow: hidden; */
 }
 
 .page-title {
@@ -81,13 +81,13 @@ body > .container-fluid {
 }
 
 .page-content {
-  /* height: 500px; */
   height: 100%;
 }
 
 @media only screen and (max-width: 770px) {
   .page-ti-co {
     margin-top: 0;
+    display: block;
   }
 }
 

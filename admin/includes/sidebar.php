@@ -9,7 +9,6 @@
               align-items-sm-start
               text-white
               left-side
-              min-vh-100
             "
           >
           <!--px-3
@@ -38,7 +37,7 @@
             >
               <!-- Home -->
               <li class="nav-item">
-                <a href="#" class="nav-link align-middle px-0">
+                <a href="index.php" class="nav-link align-middle px-0 main-link">
                   <i class="fa fa-home"></i>
                   <span class="ms-1 d-none d-sm-inline">Home</span>
                 </a>
@@ -46,9 +45,7 @@
               <!-- Dashboard -->
               <li class="nav-item">
                 <a
-                  href="#submenu1"
-                  data-bs-toggle="collapse"
-                  class="nav-link px-0 align-middle"
+                  class="nav-link px-0 align-middle main-link"
                 >
                   <i class="fa fa-tachometer"></i>
                   <span class="ms-1 d-none d-sm-inline">Dashboard</span>
@@ -56,7 +53,7 @@
               </li>
               <!-- Order -->
               <li class="nav-item">
-                <a href="#" class="nav-link px-0 align-middle">
+                <a href="#" class="nav-link px-0 align-middle main-link">
                 <i class="fa fa-calendar"></i>
                   <span class="ms-1 d-none d-sm-inline">Orders</span></a
                 >
@@ -65,15 +62,34 @@
               <li class="nav-item">
                 <a
                   href="product.php"
-                  class="nav-link px-0 align-middle"
+                  class="nav-link px-0 align-middle main-link"
                 >
                   <i class="fa fa-inbox"></i>
                   <span class="ms-1 d-none d-sm-inline">Products</span>
                 </a>
               </li>
+              <!-- Category -->
+              <li class="nav-item">
+                <a
+                  class="nav-link px-0 align-middle main-link"
+                  href="#submenu1"
+                  data-bs-toggle="collapse"
+                >
+                  <i class="fa fa-inbox"></i>
+                  <span class="ms-1 d-none d-sm-inline">Category</span>
+                </a>
+                <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                  <li class="w-100">
+                    <a href="catadd.php" class="nav-link px-0"> <span class="d-none d-sm-inline">Category Add</span> * </a>
+                  </li>
+                  <li>
+                    <a href="catlist.php" class="nav-link px-0"> <span class="d-none d-sm-inline">Category List</span> * </a>
+                  </li>
+                </ul>
+              </li>
               <!-- Customers -->
               <li class="nav-item">
-                <a href="#" class="nav-link px-0 align-middle">
+                <a href="#" class="nav-link px-0 align-middle main-link">
                   <i class="fa fa-users"></i>
                   <span class="ms-1 d-none d-sm-inline">Customers</span>
                 </a>

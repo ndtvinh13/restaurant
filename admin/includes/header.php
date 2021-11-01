@@ -29,8 +29,9 @@
       integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
       crossorigin="anonymous"
     />
-
+    <!-- Css Links -->
     <link href="css/admin.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -50,7 +51,7 @@
         <div class="container-fluid">
           <div class="d-flex align-items-center">
             <a class="navbar-brand" href="#">BurgerZ</a>
-            <div>Admin page & configuration</div>
+            <div>Admin page & Configuration</div>
           </div>
           <div class="d-flex align-items-center">
             <div>Hello, <?php echo $_SESSION['adminUser']; ?>  !</div>

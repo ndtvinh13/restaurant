@@ -19,16 +19,30 @@
         private function connectDB(){
             $this->link = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
             if(!$this->link){
-                $this->error="connection fail".$this->link->connect_error;
+                $this->error="Connection fail!!!!!".$this->link->connect_error;
                 return false;
             }
         }
 
+        //Read or Select data
         public function select($query){
             $result=$this->link->query($query) or 
             die($this->link->error.__LINE__);
-            if($result->num_rows >0){
+            // if($result->num_rows >0){
+            if (!empty($result) && $result->num_rows > 0) {
                 return $result;
+            }else{
+                return false;
+            }
+        }
+
+        
+        //Insert data
+        public function insert($query){
+            $insert_row=$this->link->query($query) or 
+            die($this->link->error.__LINE__);
+            if($insert_row){
+                return $insert_row;
             }else{
                 return false;
             }

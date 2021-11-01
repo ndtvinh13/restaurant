@@ -27,7 +27,7 @@
             $adminPass=mysqli_real_escape_string($this->db->link, $adminPass);
 
             if(empty($adminUser) || empty($adminPass)){
-                $alert="User and Pass must not be emty";
+                $alert="User and Pass must not be empty";
                 return $alert;
             }else{
                 $query = "SELECT * FROM admin WHERE adminUser='$adminUser' AND adminPass='$adminPass' LIMIT 1";

@@ -5,8 +5,8 @@
         <!-- page content goes here -->
         <!-- Home page -->
         <div class="container-fluid page-ti-co p-0 col-10 col-sm-8 col-md-8">
-          <div class="page-title">Product</div>
-          <div class="page-content">Content</div>
+          <div class="page-title">Category List</div>
+          <div class="page-content">C</div>
         </div>
       </div>
     </div>

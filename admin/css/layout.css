@@ -1,0 +1,5 @@
+.text-warning,
+.text-success,
+.text-danger {
+  padding: 10px 25px;
+}
