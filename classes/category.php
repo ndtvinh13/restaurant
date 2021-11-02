@@ -15,6 +15,7 @@
             $this->fm = new Format();
         }
         
+        //Insert Category
         public function insert_category($catName)
         {
             $catName=$this->fm->validation($catName);
@@ -37,6 +38,18 @@
             }
 
         }
-    }
-    
+
+        //Show category values
+        public function show_category(){
+            $query="SELECT * FROM category ORDER BY catid DESC";
+            $result=$this->db->select($query);
+            return $result;
+        }
+
+        public function getCatById($id){
+            $query="SELECT * FROM category WHERE catid='$id'";
+            $result=$this->db->select($query);
+            return $result;
+        }
+    }   
 ?>
