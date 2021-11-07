@@ -18,8 +18,8 @@
 
         <!-- page content goes here -->
         <!-- Category Add -->
-        <div class="container-fluid page-ti-co p-0 col-10 col-sm-8 col-md-8">
-          <div class="page-title">Category Add</div>
+        <div class="container-fluid page-ti-co p-0 col-11 col-sm-8 col-md-8">
+          <div class="page-title">Add New Category</div>
           <div class="page-content d-flex p-5 flex-column">
             <?php 
               if(isset($insertCat)){
@@ -31,7 +31,7 @@
                 <input type="text" class="form-control" placeholder="Please add product category here" name="catName">
               </div>
               <div class="cont-btn">
-                <button type="submit" class="btn btn-danger" name="submit" value="Save">Save</button>
+                <button type="submit" class="btn btn-success" name="submit" value="Save">Save</button>
               </div>
             </form>
           </div>

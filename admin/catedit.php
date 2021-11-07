@@ -13,32 +13,40 @@
     }else{
         $id=$_GET['catid'];
     }
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $catName=$_POST['catName'];
+        // $class Object to call function
+        //values will be passed in this argument
+        $updateCat=$cat->update_category($catName,$id);
+    }
 ?>
 
         <!-- page content goes here -->
         <!-- Category Add -->
-        <div class="container-fluid page-ti-co p-0 col-10 col-sm-8 col-md-8">
+        <div class="container-fluid page-ti-co p-0 col-11 col-sm-8 col-md-8">
           <div class="page-title">Category Edit</div>
           <div class="page-content d-flex p-5 flex-column">
             <?php 
-              if(isset($insertCat)){
-                echo $insertCat;
+              if(isset($updateCat)){
+                echo $updateCat;
               }
             ?>
+
+            <!-- Loop to display what catid from $_GET['catid'] -->
             <?php 
                 $getCatName=$cat->getCatById($id);
                 if($getCatName){
                     while($result=$getCatName->fetch_assoc()){
 
             ?>
-            <form action="catadd.php" method="post" class="container-fluid">
-              <div class="mb-3 col-auto">
-                <input type="text" value="<?php echo $result['catName'] ?>" class="form-control" placeholder="Please edit product category here" name="catName">
-              </div>
-              <div class="cont-btn">
-                <button type="submit" class="btn btn-danger" name="submit" value="Edit">Edit</button>
-              </div>
-            </form>
+                <form action="" method="post" class="container-fluid">
+                  <div class="mb-3 col-auto">
+                    <input type="text" value="<?php echo $result['catName'] ?>" class="form-control" placeholder="Please edit product category here" name="catName">
+                  </div>
+                  <div class="cont-btn">
+                    <button type="submit" class="btn btn-danger" name="submit" value="Update">Update</button>
+                  </div>
+                </form>
 
             <?php 
                     }

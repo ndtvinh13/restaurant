@@ -14,7 +14,47 @@
   /* position: relative; */
 
   /* overflow: scroll; */
+
+  vertical-align: middle;
 }
 
-tbody {
+.tbl-header {
+  /* display: flex;
+  justify-content: space-between;
+  width: 100%; */
+  /* text-align: center; */
+  position: sticky;
+  top: 0;
+}
+
+.tbl-content > td {
+  /* padding-left: 85px; */
+}
+
+.tbl-product {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 770px) {
+  .tbl-product {
+    font-weight: 10px;
+  }
+
+  .form-control,
+  .form-select {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .tbl-product {
+    font-size: 12px;
+    font-weight: 10px;
+  }
+
+  .form-control,
+  .form-select {
+    width: 95%;
+  }
 }

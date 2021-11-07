@@ -1,6 +1,6 @@
 <?php 
-    include '../lib/database.php';
-    include '../helpers/format.php';
+    include_once '../lib/database.php';
+    include_once '../helpers/format.php';
 ?>
 
 <?php
@@ -9,7 +9,7 @@
         private $db;
         private $fm;
 
-        function __construct()
+        public function __construct()
         {
             $this->db = new Database();
             $this->fm = new Format();
@@ -46,6 +46,44 @@
             return $result;
         }
 
+        //Update category
+        public function update_category($catName,$id){
+            $catName=$this->fm->validation($catName);
+
+            $catName=mysqli_real_escape_string($this->db->link, $catName);
+            $id=mysqli_real_escape_string($this->db->link, $id);
+
+            if(empty($catName)){
+                $alert="<span  class='text-warning'>Category must not be empty</span>";
+                return $alert;
+            }else{
+                $query = "UPDATE category SET catName='$catName' WHERE catid='$id'";
+                $result=$this->db->update($query);
+                if($result){  //Means if $result==true
+                    $alert="<span class='text-success'>Update Category Sucessfully</span>";
+                    return $alert;
+                }else {
+                    $alert="<span class='text-danger'>Update Category NOT Sucessfully</span>";
+                    return $alert;
+                }
+            }
+        }
+
+        //Delete category
+        public function delete_category($id){
+            $query="DELETE FROM category WHERE catid='$id'";
+            $result=$this->db->delete($query);
+            if($result){  //Means if $result==true
+                $alert="<span class='text-success'>Delete Category Sucessfully</span>";
+                return $alert;
+            }else {
+                $alert="<span class='text-danger'>Delete Category NOT Sucessfully</span>";
+                return $alert;
+            }
+        }
+
+
+        //Get Category Id
         public function getCatById($id){
             $query="SELECT * FROM category WHERE catid='$id'";
             $result=$this->db->select($query);
