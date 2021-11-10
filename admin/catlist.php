@@ -21,7 +21,7 @@
           <!-- <div class="wrapper-container"> -->
           <div class="page-title">Category List</div>
           <div class="page-content">
-            <table class="table table-sm table-hover table-responsive">
+            <table class="table table-sm table-hover table-responsive tbl-catlist">
               <thead>
                 <tr class="bg-warning tbl-header p-0">
                   <th scope="col">Serial Number</th>
